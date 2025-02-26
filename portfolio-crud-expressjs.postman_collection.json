@@ -1,0 +1,316 @@
+{
+	"info": {
+		"_postman_id": "1b525a6d-e296-434d-818d-a33fae84fc69",
+		"name": "portfolio-crud-expressjs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31234435",
+		"_collection_link": "https://www.postman.com/bringin-escape-276575/workspace/my-opensource-workspace/collection/31234435-1b525a6d-e296-434d-818d-a33fae84fc69?action=share&source=collection_link&creator=31234435"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"muj\",\n    \"lastName\": \"islam\",\n    \"mobile\": \"01010101001\",\n    \"email\": \"test334@g.com\",\n    \"password\": \"fbewferwf\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5600/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test3@g.com\",\n    \"password\": \"fbewferwf\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5600/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5600/api/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"api",
+								"profile"
+							],
+							"query": [
+								{
+									"key": null,
+									"value": "{{TOKEN}}",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"muj\",\n    \"lastName\": \"islam\",\n    \"mobile\": \"01010101001\",\n    \"email\": \"test2@g.com\",\n    \"password\": \"fbewferwf\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/update-profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"update-profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "portfolio",
+			"item": [
+				{
+					"name": "get-all-portfolio",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5600/api/get-all-portfolio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"api",
+								"get-all-portfolio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-portfolio",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"help\",\n    \"description\":\"res\",\n    \"img\":\"ime.com\",\n    \"livelink\":\"live.com\",\n    \"codelink\":\"code.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5600/api/create-portfolio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"api",
+								"create-portfolio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-portfolio",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"ttyu\",\n    \"description\":\"dxxxx\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5600/api/update-portfolio/67bf5ce628e6d2a91feb73f7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"api",
+								"update-portfolio",
+								"67bf5ce628e6d2a91feb73f7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-portfolio",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5600/api/delete-portfolio/67bf5ce628e6d2a91feb73f7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"api",
+								"delete-portfolio",
+								"67bf5ce628e6d2a91feb73f7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "TOKEN",
+			"value": "Bearer {{vault:json-web-token}}"
+		}
+	]
+}
