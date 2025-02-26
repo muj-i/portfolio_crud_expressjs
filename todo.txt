@@ -1,0 +1,12 @@
+1. Proj Structure
+2. Packages
+    - npm i cors
+    - npm i express
+    - npm i mongoose
+    - npm i express-rate-limit
+    - npm i helmet
+    - npm i jsonwebtoken
+    - npm i nodemailer
+    - npm i nodemon
+3. Route Config
+4. app.js Config
