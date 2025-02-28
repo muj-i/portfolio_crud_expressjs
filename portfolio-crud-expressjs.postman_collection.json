@@ -127,12 +127,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/update-profile",
+							"raw": "http://localhost:5600/api/update-profile",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "3000",
+							"port": "5600",
 							"path": [
 								"api",
 								"update-profile"
